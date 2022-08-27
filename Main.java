@@ -7,30 +7,30 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	Maze safari = new Maze();
+	Maze labyrinth = new Maze();
     Scanner keyboard = new Scanner(System.in);
-    while(!safari.isFinished){
-        System.out.println(safari.getCurrentRoomDescription());
-        System.out.println(safari.getCurrentRoomExits());
+    while(!labyrinth.isFinished){
+        System.out.println(labyrinth.getCurrentRoomDescription());
+        System.out.println(labyrinth.getCurrentRoomExits());
         System.out.println("please put in a command");
         char command = keyboard.nextLine().charAt(0);
         if(command == 'n'||command == 's' || command == 'e'||command == 'w'|| command == 'u' ||command == 'd'){
-            if(!safari.move(command))
+            if(!labyrinth.move(command))
                 System.out.println("Movement is not in a valid direction");
         }
         if(command == 'i'){
-            System.out.println(safari.interactWithCurrentRoom());
+            System.out.println(labyrinth.interactWithCurrentRoom());
         }
          if (command == 'l'){
-             System.out.println(safari.lootCurrentRoom());
+             System.out.println(labyrinth.lootCurrentRoom());
          }
         if (command == 'x') {
-            System.out.println(safari.exitCurrentRoom());
+            System.out.println(labyrinth.exitCurrentRoom());
         }
         if (command == 'v'){
-            System.out.println(safari.getInventory());
+            System.out.println(labyrinth.getInventory());
         }
         }
-        System.out.println(safari.getPlayerScore());
+        System.out.println(labyrinth.getPlayerScore());
     }
     }

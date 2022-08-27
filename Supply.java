@@ -6,14 +6,14 @@ public Supply (String name){
 }
 
     public String Loot(Player one) {
-    one.addToInventory("Jeep");
+    one.addToInventory("Sword and Shield");
     one.addToScore(3);
-        return "You found a Jeep";
+        return "You found a Sword and Shield ";
 
     }
 
     @Override
     public String getDescription() {
-        return "You enter a Supply room to get gear for your safari and find a Jeep.";
+        return "You enter a Supply room to get gear for your labyrinth journey and find a Sword and a Shield.";
     }
 }

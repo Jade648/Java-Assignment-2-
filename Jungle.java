@@ -7,17 +7,17 @@ public class Jungle extends Room implements Interact, Lootable {
     }
 
     public String interact(Player one) {
-       return  "You drive the Jeep into the Jungle"+"you use the Camera to take a picture of the elephants.";
+       return  "You walk out into the Jungle"+"you use the Sword and Shield to defend yourself from a Black Knight.";
     }
 
     public String Loot(Player one) {
-     one.addToInventory("Camera");
+     one.addToInventory("Powerup");
      one.addToScore(5);
-     return "You found a Camera";
+     return "You found a Powerup";
     }
 
     public String getDescription() {
-        return "You drive the Jeep out into the Jungle and stop to get out when you see a camera in the bushes." +
+        return "You walk out into the Jungle and stop to get out when you see a Powerup in the bushes." +
                 "You are interrupted by a heard of elephants, but then the elephants are interrupted by a Black Panther." + "The Panther sees you, you have to get past the panther by trying to go East to the next room.";
     }
 }
